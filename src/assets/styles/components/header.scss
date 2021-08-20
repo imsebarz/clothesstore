@@ -1,0 +1,45 @@
+@use '../colors.scss' as colors;
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header,
+.navbar {
+  display: flex;
+  place-content: space-around;
+}
+
+.header {
+  .searchbar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    input {
+      height: 30px;
+      margin: auto;
+    }
+  }
+  .buttons {
+    display: flex;
+    justify-content: space-around;
+    p {
+      padding: 0 1em;
+    }
+  }
+}
+
+.navbar {
+  background-color: colors.$black;
+  color: colors.$gray;
+  ul {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-around;
+    li {
+      padding: 1.2rem;
+    }
+  }
+}
