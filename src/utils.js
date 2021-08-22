@@ -1,11 +1,11 @@
-export const getProducts = async (query) => {
-  const token =
+export const getProducts = async (query, limit) => {
+  let token =
     localStorage.getItem("accessToken") ||
     localStorage.setItem("accessToken", await getNewToken());
   const response = await fetch(
     `${process.env.API_URL}/search?q=${encodeURIComponent(
       query
-    )}&limit=10&category=MCO1430`,
+    )}&limit=${limit}&category=MCO1430`,
     {
       method: "get",
       headers: new Headers({
@@ -14,8 +14,8 @@ export const getProducts = async (query) => {
       }),
     }
   );
-  if (response.status >= 400 && response.status < 500) {
-    token = await getNewToken();
+  if (response.status >= 400) {
+    localStorage.clear();
     getProducts(query);
   } else {
     const resultados = await response.json();
