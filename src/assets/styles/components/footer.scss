@@ -11,10 +11,31 @@ footer {
   .footer-links {
     display: flex;
     justify-content: space-around;
+    text-align: left;
+    h3 {
+      font-size: 2rem;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      li {
+        font-family: "Helvetica-Neue-Ligth";
+        font-weight: 100;
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        color: colors.$gray;
+      }
+    }
   }
   .footer-copy {
     border-top: 1px solid colors.$gray;
     padding-top: 1rem;
+    font-family: "Helvetica-Neue-Ligth";
+    font-weight: 100;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    color: colors.$gray;
   }
 
   .politics,
@@ -28,6 +49,47 @@ footer {
   .social {
     ul {
       display: flex;
+      flex-direction: row;
+      li {
+        svg {
+          width: 30px;
+          height: 30px;
+          min-width: 30px;
+          min-height: 30px;
+          fill: #fff;
+          path {
+            fill: colors.$black;
+          }
+          .a {
+            fill: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  footer {
+    justify-content: center;
+    align-items: center;
+    .footer-links {
+      flex-direction: column;
+      gap: 5rem;
+      width: 80%;
+      h3 {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid colors.$white;
+      }
+      h3:after {
+        content: "+";
+      }
+      ul {
+        display: none;
+      }
     }
   }
 }

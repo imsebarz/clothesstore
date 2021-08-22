@@ -4,21 +4,24 @@
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   width: max-content;
+  cursor: pointer;
   margin: auto;
   img {
     grid-row: 1 / -1;
     grid-column: 1 / 2;
     width: 100%;
-    max-width: 40em;
+    max-width: 50em;
     object-fit: cover;
     height: auto;
   }
   h2 {
-    grid-row: 2 / 3;
+    grid-row: 3 / -1;
     grid-column: 1 / 2;
     width: 100%;
     height: auto;
     margin: auto;
+    font-style: italic;
+    text-shadow: 4px 2px 5px colors.$dark;
     text-align: center;
     font-size: clamp(2rem, 10vw + 1rem, 5rem);
     color: colors.$white;
