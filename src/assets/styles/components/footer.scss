@@ -1,0 +1,33 @@
+@use '../colors.scss' as colors;
+
+footer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background: colors.$black;
+  color: colors.$white;
+  padding: 5rem 3rem 1rem 3rem;
+  gap: 3rem;
+  .footer-links {
+    display: flex;
+    justify-content: space-around;
+  }
+  .footer-copy {
+    border-top: 1px solid colors.$gray;
+    padding-top: 1rem;
+  }
+
+  .politics,
+  .aboutus,
+  .social {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .social {
+    ul {
+      display: flex;
+    }
+  }
+}

@@ -1,8 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./Components/Header";
-import Home from "./Components/Home";
-import SearchResults from "./Components/SearchResults";
+import "./assets/styles/global.scss";
+import Home from "./Containers/Home";
+import SearchResults from "./Containers/SearchResults";
+import Footer from "./Components/Footer";
 
 const App = () => {
   return (
@@ -17,6 +19,7 @@ const App = () => {
             <Home />
           </Route>
         </Switch>
+        <Footer></Footer>
       </div>
     </Router>
   );
