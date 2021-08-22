@@ -9,13 +9,15 @@
 .navbar {
   display: flex;
   place-content: space-around;
+  font-size: 1.6rem;
+  padding: 1rem;
 }
 
 .header {
   .searchbar {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 3rem;
     input {
       height: 30px;
       margin: auto;
@@ -25,7 +27,7 @@
     display: flex;
     justify-content: space-around;
     p {
-      padding: 0 1em;
+      padding: 0 2rem;
     }
   }
 }

@@ -1,0 +1,26 @@
+@use '../colors.scss' as colors;
+
+.fSection {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  width: max-content;
+  margin: auto;
+  img {
+    grid-row: 1 / -1;
+    grid-column: 1 / 2;
+    width: 100%;
+    max-width: 40em;
+    object-fit: cover;
+    height: auto;
+  }
+  h2 {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    font-size: clamp(2rem, 10vw + 1rem, 5rem);
+    color: colors.$white;
+  }
+}

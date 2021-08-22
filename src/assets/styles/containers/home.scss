@@ -1,0 +1,30 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  .banner {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .featured-sections {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .products {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    h2 {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 40em) {
+  .home {
+    .banner {
+      width: 175%;
+    }
+  }
+}

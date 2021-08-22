@@ -1,14 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link, useHistory } from "react-router-dom";
 import "../assets/styles/components/header.scss";
 
 const Header = () => {
+  const [query, setQuery] = useState("");
+  const history = useHistory();
+
+  function GoSearch(query) {
+    history.push({
+      pathname: "/search-results",
+      state: { query },
+    });
+    console.log(query);
+  }
+
   return (
     <div className="header-container">
       <div className="header">
-        <h1>CLOTHESSTORE</h1>
+        <Link to="/">
+          <h1>CLOTHESSTORE</h1>
+        </Link>
         <div className="searchbar">
-          <input type="text" placeholder="Buscar aqui tu producto" />
-          <p>🔍</p>
+          <input
+            type="text"
+            placeholder="Buscar aqui tu producto"
+            onKeyUp={(e) => setQuery(e.currentTarget.value)}
+          />
+          <button onClick={() => GoSearch(query)}>🔍</button>
         </div>
         <div className="buttons">
           <p>🛒</p>

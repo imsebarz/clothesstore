@@ -1,0 +1,28 @@
+@use '../colors.scss' as colors;
+
+.product {
+  display: flex;
+  flex-direction: column;
+  width: 20em;
+  img {
+    min-height: 250px;
+    object-fit: cover;
+  }
+  background: colors.$gray;
+  border: 1px solid colors.$gray;
+  .info {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    .prices {
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+    }
+    button {
+      width: 100%;
+      color: colors.$white;
+      background: colors.$black;
+    }
+  }
+}
