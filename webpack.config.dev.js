@@ -1,10 +1,7 @@
-const path = require("path");
-const Dotenv = require("dotenv-webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const TerserPlugin = require("terser-webpack-plugin");
+const path = require("path");
+const Dotenv = require("dotenv-webpack");
 
 module.exports = {
   entry: "./src/index.js",
@@ -15,7 +12,7 @@ module.exports = {
   resolve: {
     extensions: [".js", ".jsx"],
   },
-  mode: "production",
+  mode: "development",
   module: {
     rules: [
       {
@@ -51,10 +48,10 @@ module.exports = {
       filename: "[name].css",
     }),
     new Dotenv(),
-    new CleanWebpackPlugin(),
   ],
-  optimization: {
-    minimize: true,
-    minimizer: [new CssMinimizerPlugin(), new TerserPlugin()],
+  devServer: {
+    static: path.join(__dirname, "dist"),
+    compress: true,
+    port: 3006,
   },
 };
