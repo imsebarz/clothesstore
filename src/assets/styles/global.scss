@@ -1,3 +1,24 @@
+@font-face {
+  font-family: "Bebas";
+  src: url("/src/assets/fonts/bebas-neue.woff") format("woff"),
+    url("/src/assets/fonts/bebas-neue.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica-Neue-Ligth";
+  src: url("/src/assets/fonts/Helvetica-Neue-Ligth.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica-Neue-Bold";
+  src: url("/src/assets/fonts/Helvetica-Neue-Bold.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -7,6 +28,8 @@ html {
   margin: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+  font-family: "Helvetica-Neue-Bold";
+  font-weight: bolder;
 }
 
 body {
@@ -15,7 +38,7 @@ body {
 }
 
 section {
-  margin: 3rem 0;
+  margin: 3rem;
 }
 
 .products-container {
