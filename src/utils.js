@@ -16,7 +16,7 @@ export const getProducts = async (query, limit) => {
   );
   if (response.status >= 400) {
     localStorage.clear();
-    getProducts(query);
+    getProducts(query, limit);
   } else {
     const resultados = await response.json();
     return resultados;
